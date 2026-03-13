@@ -1,0 +1,36 @@
+name: engeo_flutter
+description: A modern Flutter rewrite of the EnGeo Georgian-English Dictionary.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Local SQLite database
+  sqflite: ^2.2.8+4
+
+  # File system paths (for copying database)
+  path_provider: ^2.0.15
+
+  # Opening links (About page)
+  url_launcher: ^6.3.2
+  
+  # For joining path components
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/engeo.db
