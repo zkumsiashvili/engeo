@@ -7,7 +7,7 @@ class AboutScreen extends StatelessWidget {
   Future<void> _launchUrl(String urlString) async {
     final Uri url = Uri.parse(urlString);
     if (!await launchUrl(url)) {
-      print('Could not launch \$urlString');
+      // print('Could not launch \$urlString');
     }
   }
 
@@ -32,10 +32,12 @@ class AboutScreen extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             InkWell(
-              onTap: () => _launchUrl('http://www.gnu.org/licenses/gpl-3.0.txt'),
+              onTap: () =>
+                  _launchUrl('http://www.gnu.org/licenses/gpl-3.0.txt'),
               child: const Text(
                 'GPLv3 - see http://www.gnu.org/licenses/gpl-3.0.txt',
-                style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                style: TextStyle(
+                    color: Colors.blue, decoration: TextDecoration.underline),
               ),
             ),
             const SizedBox(height: 16),
@@ -47,7 +49,8 @@ class AboutScreen extends StatelessWidget {
               onTap: () => _launchUrl('mailto:zkumsiashvili@gmail.com'),
               child: const Text(
                 'Zurab Kumsiashvili <zkumsiashvili@gmail.com>',
-                style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                style: TextStyle(
+                    color: Colors.blue, decoration: TextDecoration.underline),
               ),
             ),
             const SizedBox(height: 16),
@@ -59,7 +62,8 @@ class AboutScreen extends StatelessWidget {
               onTap: () => _launchUrl('http://code.google.com/p/engeo/'),
               child: const Text(
                 'http://code.google.com/p/engeo/',
-                style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                style: TextStyle(
+                    color: Colors.blue, decoration: TextDecoration.underline),
               ),
             ),
             const SizedBox(height: 16),
@@ -68,10 +72,12 @@ class AboutScreen extends StatelessWidget {
               style: TextStyle(fontWeight: FontWeight.bold),
             ),
             InkWell(
-              onTap: () => _launchUrl('http://code.google.com/p/engeo/source/browse/'),
+              onTap: () =>
+                  _launchUrl('http://code.google.com/p/engeo/source/browse/'),
               child: const Text(
                 'http://code.google.com/p/engeo/source/browse/',
-                style: TextStyle(color: Colors.blue, decoration: TextDecoration.underline),
+                style: TextStyle(
+                    color: Colors.blue, decoration: TextDecoration.underline),
               ),
             ),
           ],

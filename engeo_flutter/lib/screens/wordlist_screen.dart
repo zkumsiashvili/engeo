@@ -8,7 +8,7 @@ class WordlistScreen extends StatefulWidget {
   const WordlistScreen({Key? key}) : super(key: key);
 
   @override
-  _WordlistScreenState createState() => _WordlistScreenState();
+  State<WordlistScreen> createState() => _WordlistScreenState();
 }
 
 class _WordlistScreenState extends State<WordlistScreen> {
@@ -81,7 +81,8 @@ class _WordlistScreenState extends State<WordlistScreen> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const PreferencesScreen()),
+                MaterialPageRoute(
+                    builder: (context) => const PreferencesScreen()),
               );
             },
           ),
